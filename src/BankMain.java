@@ -39,13 +39,14 @@ public class BankMain {
 		
 		if(balance>=withdraw)
 		{
+			balance = balance-withdraw;
 			System.out.println("withdrawl amt is ="+withdraw);
 		}
 		else
 		{
 			System.out.println("Insufficient fund");
 		}
-		System.out.println("Remaining balance is ="+(balance-withdraw));
+		System.out.println("Remaining balance is ="+balance);
 		
 	}
     
@@ -56,7 +57,8 @@ public class BankMain {
 		deposit=sc.nextInt();
 		
 		System.out.println("the deposite amt of User1="+deposit);
-		System.out.println("The total balance of User1 is ="+(balance+deposit));
+	    balance=balance+deposit;
+		System.out.println("The total balance of User1 is ="+balance);
 		
 		
 	}
